@@ -7,16 +7,17 @@ body {
     background-color: gray;
     color: white;
     text-align: center;
+    font-family: sans-serif;
     padding:5px;
 }
 
 #navigation {
-    line-height:30px;
     background-color:#eeeeee;
     height:300px;
     width:200px;
     float:left;
     padding:5px; 
+    font-family: sans-serif;
 }
 #section {
     width:350px;
@@ -30,7 +31,24 @@ body {
     text-align:center;
     padding:5px; 
 }
-
-a {
+a.navigation {
     background-color: orange;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Courier";
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    height: 40px;
+    display: block;
+    padding: 4px;
+}
+a.navigation:hover, a.naviation:active {
+    background-color: Chocolate;
+}
+ul.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
