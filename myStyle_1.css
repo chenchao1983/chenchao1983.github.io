@@ -1,6 +1,6 @@
 body {
     color:RoyalBlue;
-    background-color: #FFFAFA;
+    background-color: lightyellow;
 }
 
 #header{
@@ -78,4 +78,10 @@ li.sectionol {
     font-weight: normal;
     margin-left: 0;
     padding-left: 0;
+}
+iframe{
+    color: blue;
+}
+body.section{
+    background-color: lightyellow;
 }
