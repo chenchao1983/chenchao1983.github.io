@@ -4,10 +4,19 @@
     
 <head>
     
-<title> Chao Chen's homepage </title>
+<title> Chao Chen's Homepage </title>
 <meta charset="UTF-8">
 <meta name="Chao Chen" content="home page">
 <link rel="stylesheet" type="text/css" href="myStyle_1.css">
+    
+<script language="javascript" type="text/javascript">
+  function resizeIframe(obj) {
+    var myWidth = document.getElementById("section").offsetWidth - document.getElementById("navigation").offsetWidth;
+    var myHeight = document.getElementById("navigation").offsetHeight;
+    obj.style.width = myWidth - 5 + 'px';
+    obj.style.height = myHeight + 'px';
+  }
+</script>
     
 </head>
     
@@ -19,16 +28,20 @@
 
 <div id = "navigation">
     <ul class = "navigation">
-    <li><a class = "navigation" href = "Bio.html">About Me</a></li>
-    <li><a class = "navigation" href = "Experience.html">Experience</a></li>
-    <li><a class = "navigation" href = "Pub.html">Publications</a></li>
-    <li><a class = "navigation" href = "Edu.html">Education</a></li>
-    <li><a class = "navigation" href = "Contact.html">Contact Me</a></li>
+    <li><a class = "navigation" href = "Bio.html" target = "showFrame">About Me</a></li>
+    <li><a class = "navigation" href = "Experience.html" target = "showFrame">Experience</a></li>
+    <li><a class = "navigation" href = "Pub.html" target = "showFrame">Publications</a></li>
+    <li><a class = "navigation" href = "Edu.html" target = "showFrame">Education</a></li>
+    <li><a class = "navigation" href = "Contact.html" target = "showFrame">Contact Me</a></li>
     </ul>
 </div>
 
+<div id = "section">    
+    <iframe src="Bio.html" name = "showFrame" frameborder="0" onload='javascript:resizeIframe(this);'></iframe>
+</div>
+
 <div id="footer">
-Maintained by Chao Chen
+    <p>Maintained by Chao Chen</p>
 </div>   
 
 </body>
