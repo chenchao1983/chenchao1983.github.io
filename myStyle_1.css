@@ -14,7 +14,7 @@ body {
 
 #navigation {
     background-color:orange;
-    height:400px;
+    height:500px;
     width:200px;
     float:left;
     padding:5px; 
@@ -91,8 +91,14 @@ p.publication{
     font-weight: normal;
 }
 a.publication:link{
-    color:blue;
+    color:white;
+    display:inline;
+    text-decoration: none;
+    background-color: orange;
 }
 a.publication:visited{
-    color:blue;
+    color:white;
+    text-decoration: none;
+    display:inline;
+    background-color: orange;
 }
