@@ -102,3 +102,6 @@ a.publication:visited{
     display:inline;
     background-color: orange;
 }
+a.publication:hover{
+    background-color: chocolate;
+}
