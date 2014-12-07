@@ -28,11 +28,13 @@ body {
     color:white;
     clear:both;
     text-align:center;
+    padding:5px; 
 }
 p.section{
     font-size: 20px;
     color:black;
     font-family: serif;
+    text-align: justify;
 }
 a.navigation {
     background-color: orange;
@@ -84,4 +86,13 @@ iframe{
 }
 body.section{
     background-color: lightyellow;
+}
+p.publication{
+    font-weight: normal;
+}
+a.publication:link{
+    color:blue;
+}
+a.publication:visited{
+    color:blue;
 }
