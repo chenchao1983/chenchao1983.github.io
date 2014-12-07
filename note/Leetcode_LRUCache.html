@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Leetcode Least Recently Used Cache </title> 
+    <link rel="stylesheet" type="text/css" href="../myStyle_1.css">
+</head>
+
+<body>
+    <p class = "section">
+        Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set.
+        <br>
+        get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+        <br>
+        set(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
+    </p>
+    <p class = "section">
+    My solution:
+    <code>
+        <pre>
+        class cacheEntry{
+        public:
+            cacheEntry(int k, int v) : key(k), val(v) {}
+            int key;
+            int val;
+        };
+
+        class LRUCache{
+        public:
+            LRUCache(int cap) : capacity(cap) {}
+            int get(int key) {
+                auto map_entry = mem_map.find(key);
+                if(map_entry == mem_map.end())
+                    return - 1;
+                else {
+                    int val = map_entry -> second -> val;
+                    cache.erase(map_entry->second);
+                    cache.push_front(cacheEntry(key, val));
+                    mem_map[key] = cache.begin();
+                    return val;
+                }
+            }
+
+            void set(int key, int val) {
+                auto map_entry = mem_map.find(key);
+                if(map_entry == mem_map.end()) {
+                    if(cache.size() == capacity) {//decache the least used one
+                        int last_key = cache.back().key;
+                        mem_map.erase(last_key);
+                        cache.pop_back();
+                    }
+                }
+                else {
+                    cache.erase(map_entry->second);
+                }
+                cache.push_front(cacheEntry(key, val));
+                mem_map[key] = cache.begin();
+            }
+        private:
+            list<cacheEntry> cache;
+            int capacity;
+            unordered_map<int, list<cacheEntry>::iterator> mem_map;
+        };  
+        </pre>
+    </code>
+    </p>
+    
+</body>
