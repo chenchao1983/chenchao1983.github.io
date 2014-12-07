@@ -105,3 +105,10 @@ a.publication:visited{
 a.publication:hover{
     background-color: chocolate;
 }
+a.section{
+    text-decoration: none;
+    color:orange;
+}
+a.section:hover{
+    background-color: chocolate;
+}
